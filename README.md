@@ -13,10 +13,9 @@ merge 3 test_in.pgm test_out.pgm
 
 bubble 5 test_in.pgm test_out.pgm
 
+
 Specifications:
-
 You can only choose "merge" or "bubble" for your sorting algorithm.
-
 Window size should be an odd positive number. The bigger it is, the blurrier the image becomes.
 
 
