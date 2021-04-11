@@ -97,20 +97,11 @@ int main() {
     fin >> fileType;
     fout << fileType << endl;
 
-    string input;
-    fin >> input;
-    while (input.find('#') != string::npos) {
-        fin >> input;
-    }
-    int width = stoi(input), height;
-    fin >> height;
+    int width, height;
+    fin >> width >> height;
     fout << width << " " << height << endl;
-
-    fin >> input;
-    while (input.find('#') != string::npos) {
-        fin >> input;
-    }
-    int maxPixelValue = stoi(input);
+    int maxPixelValue;
+    fin >> maxPixelValue;
     fout << maxPixelValue << endl;
 
     Image img(width, height, n, maxPixelValue);
@@ -124,7 +115,7 @@ int main() {
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            fout << img[{i, j }] << " ";
+            fout << img[{i, j}] << " ";
         }
         fout << endl;
     }
