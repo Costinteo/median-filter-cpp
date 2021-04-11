@@ -3,19 +3,21 @@ A simple C++ program to apply median filters to photos. Median filter is usually
 
 It requires an input file of pgm format.
 
-General form of standard input:
+## General form of standard input:
 
-sorting_algorithm_chosen size_of_median_window inputfilename.pgm outputfilename.pgm
+`sorting_algorithm_chosen size_of_median_window inputfilename.pgm outputfilename.pgm`
 
-Example standard stream input:
+## Example standard stream input:
 
-merge 3 test_in.pgm test_out.pgm
+`merge 3 test_in.pgm test_out.pgm`
 
-bubble 5 test_in.pgm test_out.pgm
+`bubble 5 test_in.pgm test_out.pgm`
 
 
-Specifications:
+## Specifications:
+
 You can only choose "merge" or "bubble" for your sorting algorithm.
+
 Window size should be an odd positive number. The bigger it is, the blurrier the image becomes.
 
 
