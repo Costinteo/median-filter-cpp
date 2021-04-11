@@ -21,10 +21,10 @@ You can only choose "merge" or "bubble" for your sorting algorithm.
 Window size should be an odd positive number. The bigger it is, the blurrier the image becomes.
 
 
-Before:
+## Before:
 
 ![BEFORE:](https://user-images.githubusercontent.com/39965799/114322722-69bf2b80-9b2a-11eb-83f7-d7fa1a797611.png)
 
-After (window size 3):
+## After (window size 3):
 
 ![AFTER (window size 3):](https://user-images.githubusercontent.com/39965799/114322728-73489380-9b2a-11eb-919c-64973d670f14.png)
