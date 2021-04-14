@@ -41,7 +41,7 @@ public:
         if (x <= 0 and y <= 0) return pixelValues[0][0];
         else if (x <= 0 and y > 0) return pixelValues[min(y, this->getHeight() - 1)][0]; // if y out of bounds then take the max y possible
         else if (x > 0 and y <= 0) return pixelValues[0][min(x, this->getWidth() - 1)]; // if x oob then take the max x possible
-        else if (x > 0 and y > 0) return pixelValues[min(y, this->getHeight() - 1)][min(x, this->getHeight() - 1)];
+        else if (x > 0 and y > 0) return pixelValues[min(y, this->getHeight() - 1)][min(x, this->getWidth() - 1)];
     }
 
     // we presume x and y in bounds for this function
@@ -95,13 +95,33 @@ int main() {
 
     string fileType;
     fin >> fileType;
+    cout << fileType << endl;
     fout << fileType << endl;
 
+    fin.get();
+    string line;
+    while(true) {
+        getline(fin, line);
+        if (line.find('#') == string::npos) {
+            break;
+        }
+    }
     int width, height;
-    fin >> width >> height;
+    width = stoi(line.substr(0,line.find(' ')));
+    height = stoi(line.substr(line.find(' ') + 1, line.length() - line.find(' ')));
+    cout << width << " " << height << endl;
     fout << width << " " << height << endl;
+
+    while(true) {
+        getline(fin, line);
+        if (line.find('#') == string::npos) {
+            break;
+        }
+    }
+
     int maxPixelValue;
-    fin >> maxPixelValue;
+    maxPixelValue = stoi(line);
+    cout << maxPixelValue << endl;
     fout << maxPixelValue << endl;
 
     Image img(width, height, n, maxPixelValue);
